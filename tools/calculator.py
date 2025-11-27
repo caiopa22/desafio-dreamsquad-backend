@@ -5,21 +5,11 @@ from typing import Union
 
 
 @tool
-def MathTool(data: Union[MathInput, dict, str]) -> str:
+def calculator(data: Union[MathInput, dict, str]) -> str:
     """
-    USAR APENAS para cálculos matemáticos explícitos como:
-    - Operações aritméticas: 2+2, 10*5, 100/4
-    - Expressões algébricas: x**2, sqrt(16)
-    - Porcentagens: 20% de 100
-    
-    NÃO USAR para:
-    - Perguntas gerais
-    - Conversas
-    - Eventos históricos
-    - Qualquer coisa que não seja matemática
-    
-    Args:
-        data: Expressão matemática como string, dict ou MathInput
+    Calcula expressões matemáticas explícitas.
+    Exemplos: "2+2", "10*5", "20% de 100"
+    Use SOMENTE quando houver uma operação matemática clara.
     """
 
     # Normaliza o input em um dict
