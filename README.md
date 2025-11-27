@@ -9,6 +9,8 @@
 
 Uma API de chat robusta desenvolvida como solução para um desafio técnico da **Dreamsquad**. O backend utiliza um agente de IA inteligente que integra modelos LLM locais com ferramentas especializadas para processar mensagens, resolver operações matemáticas e manter contexto de conversação. Tudo executado **100% localmente** usando Ollama.
 
+**Para uma melhor experiência de uso e teste**, recomendamos utilizar o [frontend complementar](https://github.com/caiopa22/desafio-dreamsquad-frontend), que oferece uma interface para interagir com o agente de IA.
+
 ---
 
 ## 🎯 Objetivo
@@ -327,3 +329,4 @@ Desenvolvido por **Caio Pacheco Andrade** como solução para o desafio técnico
 ---
 
 **Última atualização:** Novembro de 2025
+
