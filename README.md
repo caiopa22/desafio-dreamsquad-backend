@@ -147,7 +147,7 @@ ollama pull qwen2.5:7b
 Crie um arquivo `.env` na raiz do projeto:
 
 ```bash
-cp .env.example .env
+touch .env
 ```
 
 Edite o arquivo `.env` com suas configurações:
@@ -329,5 +329,6 @@ Desenvolvido por **Caio Pacheco Andrade** como solução para o desafio técnico
 ---
 
 **Última atualização:** Novembro de 2025
+
 
 
