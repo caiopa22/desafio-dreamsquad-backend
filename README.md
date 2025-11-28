@@ -290,7 +290,7 @@ ollama serve
 
 # Terminal 2: Configure e inicie o servidor
 cd desafio-dreamsquad-backend
-source venv/bin/activate
+venv/bin/Activate
 uvicorn app:app --reload
 ```
 ---
@@ -324,12 +324,8 @@ Todos os direitos reservados.
 
 ## 👤 Autor
 
-Desenvolvido por **Caio Pacheco Andrade** como solução para o desafio técnico da Dreamsquad.
+Desenvolvido por **Caio Pacheco Andrade**.
 
 ---
 
 **Última atualização:** Novembro de 2025
-
-
-
-
