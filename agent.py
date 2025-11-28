@@ -14,8 +14,7 @@ AGENT_NAME = os.getenv("AGENT_NAME")
 # Definindo modelo que será utilizado
 ollama_model = OllamaModel(
     model_id=MODEL,    
-    host=BASE_URL,
-    streaming=False
+    host=BASE_URL
 )
 
 # Criação e configuração do agente
@@ -25,7 +24,10 @@ agent = Agent(
     tools=[calculator],
     system_prompt=(
         f"Você é {AGENT_NAME}, um assistente em português."
-        "Use a ferramenta calculator APENAS para cálculos explícitos. "
-        "Ao apresentar resultados matemáticos, formate-os de forma clara e direta."
+        "Seja gentil, como se estivesse conversando com um amigo."
+        "Use a ferramenta calculator APENAS para cálculos explícitos."
+        "Ao apresentar resultados matemáticos, formate-os de forma clara e direta, como um amigo faria."
+        "Exemplo: 'O resultado de 2 mais 2 é 4'."
+        "Evite o uso de formatação técnica como LaTeX."
     )
 )

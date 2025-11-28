@@ -8,6 +8,8 @@ from agent import agent as agent_model
 chat_router = APIRouter(prefix="/chat", tags=["Chat"])
 agent = agent_model
 
+
+# Rota principal para engajar com o agente
 @chat_router.post(
     "/",
     summary="Conversar com o agente",
@@ -43,6 +45,7 @@ async def chat(payload: ChatRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# Rota adicional para resetar o contexto do agente
 @chat_router.post(
     "/reset",
     summary="Resetar contexto da conversa",
