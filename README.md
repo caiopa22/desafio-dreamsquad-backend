@@ -195,6 +195,23 @@ INFO:     Application startup complete
 
 ---
 
+## 📚 Documentação (Swagger)
+
+A API possui documentação automática nativa do FastAPI.
+
+Após iniciar o servidor, acesse:
+
+- Swagger UI: http://127.0.0.1:8000/docs
+
+Com elas você pode:
+
+Testar requisições pelo navegador
+
+Ver schemas e modelos
+
+Explorar todos os endpoints
+
+
 ## 💬 Endpoints
 
 ### `POST /chat/`
@@ -329,3 +346,4 @@ Desenvolvido por **Caio Pacheco Andrade**.
 ---
 
 **Última atualização:** Novembro de 2025
+
