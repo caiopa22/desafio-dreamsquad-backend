@@ -4,6 +4,8 @@ import json
 from typing import Union
 
 
+# Ferramenta para realizar cálculos matemáticos
+
 @tool
 def calculator(data: Union[MathInput, dict, str]) -> str:
     """
@@ -12,7 +14,7 @@ def calculator(data: Union[MathInput, dict, str]) -> str:
     Use SOMENTE quando houver uma operação matemática clara.
     """
 
-    # Normaliza o input em um dict
+    # Normaliza a entrada de dados para manter consistência entre perguntas
     try:
         if isinstance(data, MathInput):
             parsed = data.model_dump()
@@ -22,13 +24,13 @@ def calculator(data: Union[MathInput, dict, str]) -> str:
 
         elif isinstance(data, str):
             try:
-                parsed = json.loads(data)  # string JSON
+                parsed = json.loads(data)
             except json.JSONDecodeError:
-                parsed = {"query": data}   # string pura "2+2"
+                parsed = {"query": data}
         else:
             return "MathTool: tipo de entrada inválido."
 
-        # Extrai query (aceita vários formatos)
+        # Extrai query após formatação
         query = (
             parsed.get("query")
             or parsed.get("q")
@@ -39,7 +41,7 @@ def calculator(data: Union[MathInput, dict, str]) -> str:
         if not query:
             return "MathTool: query não encontrada."
 
-        # Eval seguro
+        # Gerando eval com __builtins__ desabilitados
         result = eval(query, {"__builtins__": None}, {})
         return str(result)
 

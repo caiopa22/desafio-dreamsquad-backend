@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Desafio DreamSquad", version=1.0)
 
+# URLs permitidas
 origins = [
     "http://localhost:5173",
     "http://127.0.0.1:5173",
@@ -20,9 +21,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Incluindo o roteamento para o chat
 app.include_router(chat.chat_router)
 
-
+# Verificação da API
 @app.get("/health")
 def getHealth():
     return {"status": "ok"}
