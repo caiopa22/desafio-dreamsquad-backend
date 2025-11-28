@@ -24,7 +24,7 @@ agent = Agent(
     model=ollama_model,
     tools=[calculator],
     system_prompt=(
-        f"Você é {AGENT_NAME}, um assistente em português. 2"
+        f"Você é {AGENT_NAME}, um assistente em português."
         "Use a ferramenta calculator APENAS para cálculos explícitos. "
         "Ao apresentar resultados matemáticos, formate-os de forma clara e direta."
     )
